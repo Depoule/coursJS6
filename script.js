@@ -1,11 +1,20 @@
-function getNumber() {
-      // je declare que je vais chercher l'element "firstNumber" via l'Id et que je ne veut que la valeur, je stocke le tout dans firstNumber
-      var firstNumber = document.getElementById('firstNumber').value;
-      //  pareil pour secondNumber
-      var secondNumber = document.getElementById('secondNumber').value;
-      // avec modulo % j'affiche le reste de la division de mes deux nombres
+function number() {
+
+  var firstNumber = document.getElementById('firstNumber').value;
+  var secondNumber = document.getElementById('secondNumber').value;
+//isNaN pour vérifier s'il ne s'agit pas d'un nombre.
+//!isNaN = false isNaN = true
+  if(isNaN(firstNumber) == false && !isNaN(secondNumber)){
+    if(secondNumber != 0){
+// != Différent
       var result = firstNumber % secondNumber;
-
+// % modulo
       alert(result);
-
+    }else{
+      alert('Mettre un chiffre différent à 0 svp.');
+    }
+  }
+  else{
+    alert('Mettre un chiffre à partir de 1 svp.');
+  }
 }
